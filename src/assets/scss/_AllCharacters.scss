@@ -1,0 +1,113 @@
+@import "./general/general.scss";
+
+.all-char {
+
+    &__container {
+        @include container
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__card-bar {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 2.4rem;
+        column-gap: 2rem;
+
+        @media screen and (max-width: 440px) {
+            row-gap: 3.2rem;
+        }
+    }
+
+    &__pagination {
+        margin-top: 3.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+
+        @media screen and (max-width: 760px) {
+            justify-content: space-between;
+        }
+    }
+
+    &__pagination-sector {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    &__pagination-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        gap: 1.5rem;
+    }
+
+    &__pagination-btn {
+        display: flex;
+
+        padding: 0.5rem;
+        border: 0.1rem solid transparent;
+        border-radius: 50%;
+
+        opacity: 0.5;
+
+        &--rotate {
+            transform: rotateY(180deg);
+        }
+
+        &--activ {
+            cursor: pointer;
+            fill: $black;
+            opacity: 1;
+
+            transition: all 0.3s linear;
+
+            &:hover,
+            &:focus {
+                border-color: $black;
+            }
+
+            &:active {
+                @include main-shadow;
+            }
+        }
+    }
+
+    &__pagination-item {
+        cursor: pointer;
+        @include item-btn;
+        display: flex;
+
+        padding: 0.5rem;
+        border: 0.1rem solid transparent;
+        border-radius: 50%;
+        opacity: 0.5;
+        transition: all 0.3s linear;
+
+        &--active {
+            opacity: 1;
+        }
+
+        &:hover,
+        &:focus {
+            border-color: $black;
+        }
+
+        &:active {
+            @include main-shadow;
+        }
+    }
+
+    &__pagination-div {
+        @include item-btn;
+        opacity: 0.5;
+    }
+
+}

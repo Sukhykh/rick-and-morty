@@ -1,0 +1,18 @@
+@import "./general/general.scss";
+
+.field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+
+    padding: 0.9rem 1.6rem 1.2rem;
+
+    &__title {
+        @include item-subTitle;
+    }
+
+    &__descr {
+        @include item-descr;
+    }
+}

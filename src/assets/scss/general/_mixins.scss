@@ -1,0 +1,119 @@
+/* function */
+@function dinamic1440($n) {
+    @return calc($n / 1440px) * 100 * 1vw;
+}
+
+@function dinamic360($n) {
+    @return calc($n / 360px) * 100 * 1vw;
+}
+
+/* containers */
+@mixin container {
+    max-width: dinamic360(312px);
+    width: 100%;
+    margin-inline: auto;
+
+
+    @media screen and (min-width: 440px) {
+        max-width: dinamic1440(1020px);
+    }
+
+    @media screen and (min-width: 1440px) {
+        max-width: 1020px;
+    }
+}
+
+/* fonts */
+@mixin karla {
+    font-family: $fontKarla;
+}
+
+@mixin input {
+    font-family: $fontRoboto;
+    font-weight: $fw400;
+    font-size: 1.6rem;
+    line-height: 150%;
+    color: $black;
+}
+
+@mixin main-title {
+    font-family: $fontRoboto;
+    font-weight: $fw500;
+    font-size: 2rem;
+    line-height: 150%;
+    letter-spacing: 0.15px;
+    color: $black;
+    opacity: 0.87;
+}
+
+@mixin main-subTitle {
+    font-family: $fontRoboto;
+    font-weight: $fw400;
+    font-size: 1.4rem;
+    line-height: 150%;
+    letter-spacing: 0.25px;
+    color: $black;
+    opacity: 0.6;
+}
+
+@mixin main-shadow {
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2),
+        0px 3px 4px rgba(0, 0, 0, 0.12),
+        0px 2px 4px rgba(0, 0, 0, 0.14);
+}
+
+@mixin item-btn {
+    font-family: $fontKarla;
+    font-weight: $fw700;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    color: $black;
+}
+
+@mixin item-title {
+    font-family: $fontRoboto;
+    font-weight: $fw400;
+    font-size: 4.8rem;
+    line-height: 5.6rem;
+    color: $blue-black;
+
+    @media screen and (max-width: 440px) {
+        font-size: 3.2rem;
+        line-height: 3.8rem;
+    }
+}
+
+@mixin item-info {
+    font-family: $fontRoboto;
+    font-weight: $fw500;
+    font-size: 2rem;
+    line-height: 120%;
+    letter-spacing: 0.15px;
+    color: $gray;
+}
+
+@mixin item-subTitle {
+    font-family: $fontRoboto;
+    font-weight: $fw700;
+    font-size: 1.6rem;
+    line-height: 150%;
+    letter-spacing: 0.15px;
+    color: $blue-black;
+}
+
+@mixin item-descr {
+    font-family: $fontRoboto;
+    font-weight: $fw400;
+    font-size: 1.4rem;
+    line-height: 143%;
+    letter-spacing: 0.25px;
+    color: $gray-black;
+}
+
+@mixin item-divider {
+    background: rgba(33, 33, 33, 0.08);
+}
+
+@mixin item-imgShadow {
+    border: 0.5rem solid $gray-light;
+}

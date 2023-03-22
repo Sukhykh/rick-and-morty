@@ -1,0 +1,5 @@
+@import "./general/general.scss";
+
+.App {
+    @include container
+}

@@ -1,0 +1,35 @@
+@import "./general/general.scss";
+
+.input {
+    margin-bottom: 6.1rem;
+
+    @media screen and (min-width: 440px) {
+        margin-bottom: 3.2rem;
+    }
+
+    &__container {
+        @include container
+    }
+
+    &__wrapper {
+        width: 100%;
+        padding: 1.6rem;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        border-radius: 8px;
+
+        &--focus {
+            border: 1px solid $black;
+        }
+    }
+
+    &__bar {
+        display: flex;
+        gap: 0.8rem;
+    }
+
+    &__area {
+        border: unset;
+        width: 100%;
+        @include input
+    }
+}

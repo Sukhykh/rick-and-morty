@@ -1,0 +1,119 @@
+@import "./general/general.scss";
+
+.single-char {
+
+    &__container {
+        @include container
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__btn-container {
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+
+        margin-top: 2.1rem;
+        margin-left: 5rem;
+
+        @include item-btn;
+        text-transform: uppercase;
+        text-decoration: unset;
+
+        cursor: pointer;
+        transition: all 0.3s linear;
+
+        @media screen and (max-width: 440px) {
+            margin-top: 2.3rem;
+            margin-left: 2.4rem;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            opacity: 0.5;
+        }
+    }
+
+    &__img-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 3.1rem;
+        text-align: center;
+        width: 30rem;
+        height: 30rem;
+
+        @include item-imgShadow;
+        border-radius: 50%;
+        overflow: hidden;
+
+        @media screen and (max-width: 440px) {
+            margin-top: 7.7rem;
+            width: 15rem;
+            height: 15rem;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__title {
+        margin-top: 1.6rem;
+        @include item-title;
+        text-align: center;
+
+        @media screen and (max-width: 440px) {
+            margin-top: 3.4rem;
+        }
+    }
+
+    &__information {
+        margin-top: 4.8rem;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+
+        @media screen and (max-width: 440px) {
+            margin-top: 3.5rem;
+            align-items: flex-start;
+        }
+    }
+
+    &__information-descr {
+        @include item-info;
+    }
+
+    &__information-bar {
+        margin: 4.8rem 0 8.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 41.3rem;
+        width: 100%;
+
+        @media screen and (max-width: 440px) {
+            margin-top: 1.6rem;
+        }
+    }
+
+    &__divider {
+        @include item-divider;
+        height: 0.1rem;
+        width: 100%;
+    }
+}
